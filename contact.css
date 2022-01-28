@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(234, 233, 243);
+}
+
+nav{
+    background-color: rgb(234, 230, 230);
+    height: 80px;
+}
+.logo h1{
+    width:500px;
+    position: absolute;
+    left: 8%;
+    top: 17px;
+    bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+.logo h1 span{
+    color: crimson;
+}
+
+
+
+nav ul{
+    font-size:15px;
+    float: right;
+    margin-right: 30px;
+    line-height: 50px;
+
+}
+nav ul li{
+    display: inline-block;
+    
+}
+nav ul li a{
+    color:black;
+    cursor:pointer;
+    left: 0;
+    position:relative;
+    padding: 5px 0;
+    margin: 8px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+
+}
+nav ul li a::before{
+    content: "";
+    position:absolute;
+    background:black;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.checkbtn{
+    float: right;
+    font-size: 20px;
+    margin-top: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+}
+
+
+#heading h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+#heading h1 span{
+    margin: 10px;
+    color: crimson;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background:rgb(133, 126, 126);
+    border-radius: 30px;
+    margin: 40px 400px;
+    padding: 30px 20px;
+}
+.contact h1{
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: aqua;
+    font-size: 15px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+#first, #second, #phone-no, #email{
+    margin: 5px 100px;
+    padding: 10px 100px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+ 
+}
+#message{
+    margin: 2px 0;
+    padding:40px 69px ;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+#submit{
+    margin-top: 20px;
+    padding: 5px 20px;
+    color: black;
+    border-radius: 14px;
+    background-color: transparent;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 3s ease background-color;
+}
+  
+#submit:hover{
+    color: #ffffff;
+    background-color: #dc143c;
+}
+
+.heading{
+    display: flex;
+    margin-top: 30px;
+    margin-left:30px;
+}
+
+.lower{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(234, 230, 230);
+    display: flex;
+    justify-content: center;
+
+}
+
+
+footer{
+    display: flex;
+    flex-direction: row;
+
+}
+footer h1{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+footer #lw{
+    margin: 10px;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.head{
+    font-size: 30px;
+    color: black;
+}
+
+@media  screen and (max-width: 768px) {
+    body{
+        overflow: hidden;
+    }
+    nav ul{
+        position: absolute;
+        height: 100vh;
+        top:80px;
+        width: 100%;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        background-color:rgb(248, 241, 241);
+        z-index: 100;
+       
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+    #check:checked~ ul{
+        left:0;
+    }
+  
+    .checkbtn{
+        display: block;
+        margin-right: 15px;
+    }
+
+    nav h1{
+        width:100%;
+        left: 1%;
+        letter-spacing: .1rem;
+        margin-right: 20px;
+        font-size: 17px;
+    
+    }
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        background:rgb(133, 126, 126);
+        border-radius: 30px;
+        margin: 10px 50px;
+        padding: 10px 1px;
+    }
+    #first, #second, #phone-no, #email{
+        margin: 2px 1px;
+        padding: 7px 80px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+     
+    }
+    #message{
+        margin: 20px 1px;
+        padding:40px 45px ;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+}
