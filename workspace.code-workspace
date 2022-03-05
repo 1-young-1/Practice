@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\Kilifi All Stars"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Practice"
+	}
+}

@@ -9,6 +9,7 @@
 }
 body{
     background-color: rgb(234, 233, 243);
+    position: absolute;
 }
 
 nav{
@@ -28,18 +29,14 @@ nav{
     color: crimson;
 }
 
-
-
 nav ul{
     font-size:15px;
-    float: right;
-    margin-right: 30px;
+     float: right; 
+     margin-right: 30px; 
     line-height: 50px;
-
 }
 nav ul li{
     display: inline-block;
-    
 }
 nav ul li a{
     color:black;
@@ -50,7 +47,6 @@ nav ul li a{
     margin: 8px;
     text-transform: uppercase;
     letter-spacing: .1rem;
-
 }
 nav ul li a::before{
     content: "";
@@ -63,7 +59,6 @@ nav ul li a::before{
     transform: scaleX(0);
     transform-origin: right;
     transition: transform .4s linear;
-  
 }
 nav ul li a:hover::before{
     transform: scaleX(1);
@@ -166,14 +161,12 @@ nav ul li a:hover::before{
     background-color: rgb(234, 230, 230);
     display: flex;
     justify-content: center;
-
 }
 
 
 footer{
     display: flex;
     flex-direction: row;
-
 }
 footer h1{
     font-size: 18px;
@@ -182,19 +175,22 @@ footer h1{
 }
 footer #lw{
     margin: 10px;
-    padding: 10px 0;
-    font-size: 25px;
+    padding: 25px 0;
+    font-size: 15px;
 }
-
 .head{
     font-size: 30px;
     color: black;
 }
 
-@media  screen and (max-width: 768px) {
-    body{
+@media screen and (max-width: 480px){
+    html,body{
+        width:100%;
+        height:100%;
+        padding:0;
+        margin: 0;
         overflow: hidden;
-    }
+     }
     nav ul{
         position: absolute;
         height: 100vh;
@@ -205,7 +201,6 @@ footer #lw{
         transition: all .5s;
         background-color:rgb(248, 241, 241);
         z-index: 100;
-       
     }
     nav ul li{
         display: block;
@@ -218,21 +213,19 @@ footer #lw{
     #check:checked~ ul{
         left:0;
     }
-  
     .checkbtn{
         display: block;
         margin-right: 15px;
     }
-
     nav h1{
         width:100%;
         left: 1%;
         letter-spacing: .1rem;
         margin-right: 20px;
         font-size: 17px;
-    
     }
-    .contact{
+    /* contact form */
+    .contact {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -242,23 +235,46 @@ footer #lw{
         background:rgb(133, 126, 126);
         border-radius: 30px;
         margin: 10px 50px;
-        padding: 10px 1px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding: 10px 2px;
     }
     #first, #second, #phone-no, #email{
         margin: 2px 1px;
-        padding: 7px 80px;
+        padding: 7px 36px;
         border-radius: 15px;
         border: none;
         outline: none;
-     
     }
     #message{
-        margin: 20px 1px;
-        padding:40px 45px ;
+        margin: 10px 1px;
+        padding:20px 7px ;
         border-radius: 15px;
         display: flex;
         justify-content: center;
     }
 
+    .lower{
+        position: fixed;
+        left:0;
+        bottom:auto;
+      
+    }
     
+    footer h1{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+    footer #lw{
+        margin: 8px;
+        padding: 8px 0;
+        font-size: 20px;
+    }
+    .head{
+        font-size: 20px;
+        color: black;
+    }
+    
+
 }

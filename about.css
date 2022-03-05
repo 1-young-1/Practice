@@ -6,9 +6,11 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    
 }
 body{
     background-color: rgb(234, 233, 243);
+    position: absolute;
 }
 
 nav{
@@ -23,19 +25,11 @@ nav{
     bottom: 0;
     text-transform: uppercase;
     letter-spacing: .3rem;
+    z-index: 100;
 }
 .logo h1 span{
     color: crimson;
 }
-
-/*nav h1{
-    width:500px;
-    position: absolute;
-    left: 8%;
-    top: 17px;
-    text-transform: uppercase;
-    letter-spacing: .3rem;  
-}*/
 
 nav ul{
     font-size:15px;
@@ -70,6 +64,7 @@ nav ul li a::before{
     transform: scaleX(0);
     transform-origin: right;
     transition: transform .4s linear;
+    z-index: 100;
   
 }
 nav ul li a:hover::before{
@@ -103,16 +98,16 @@ nav ul li a:hover::before{
     margin: 10px;
     color: crimson;
 }
+/*about content*/
 .content{
     border: none;
     outline: none;
     border-radius: 50px;
-    width: 80%;
     display: flex;
     justify-content: center;
-    margin: 5px 10%;
+    margin: 2px 10%;
     position: relative;
-    padding: 10px 10px;
+    padding: 30px 30px;
     z-index: 1;
 
 }
@@ -122,9 +117,8 @@ nav ul li a:hover::before{
     width: 100%;
     background-color:black ;
     border-radius: 25px;
-    left: 0;
     height: 100%;
-    top: 0;
+    top: .5px;
     opacity: .7;
     z-index: -1;
 
@@ -135,14 +129,14 @@ nav ul li a:hover::before{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
-    letter-spacing: .3rem;
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-bottom: 50px;
-    font-size: 15px;
     color:white;
 }
+h3{
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+/*end of about section*/
 
 .lrn{
     position:fixed;
@@ -171,15 +165,19 @@ footer #ls{
 }
 
 
-@media  screen and (max-width: 768px) {
-    body{
-        overflow: hidden;
+@media  screen and (max-width: 480px) {
+    html,body{
+       width:100%;
+       height:100%;
+       padding:0;
+       margin: 0;
+       overflow-x: hidden;
     }
     nav ul{
         position: absolute;
         height: 100vh;
         top:80px;
-        width: 100%;
+        width:100%;
         left: -100%;
         text-align: center;
         background-color:rgb(248, 241, 241);
@@ -189,7 +187,7 @@ footer #ls{
     }
     nav ul li{
         display: block;
-        margin: 50px 0;
+        margin: 50px 0px;
         line-height: 30px;
     }
     nav ul li a{
@@ -212,27 +210,14 @@ footer #ls{
         font-size: 17px;
     
     }
-    .contact{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border: none;
-        outline: none;
-        background:rgb(133, 126, 126);
-        border-radius: 30px;
-        margin: 10px 50px;
-        padding: 10px 1px;
-    }
-
     .content{
         border: none;
         outline: none;
         border-radius: 50px;
-        width: 80%;
-        display: flex;
+        width: auto;
+        flex-wrap: wrap;
         justify-content: center;
-        margin: 5px 10%;
+        margin: 10px 5%;
         position: relative;
         padding: 10px 10px;
         z-index: 1;
@@ -248,21 +233,47 @@ footer #ls{
         height: 100%;
         top: 0;
         opacity: .7;
-        z-index: -1;
-    
-        
+        z-index: -1; 
     }
     
     .content p{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         font-size: 10px;
         letter-spacing: .1rem;
         margin-top: 5px;
         margin-left: 10px;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
         color:white;
+    }
+   #heading h1 {
+       font-size: 17px;
+       margin-top: auto;
+   }
+   h3{
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 10px;
+}
+   .lower{
+    position: fixed;
+    left:0;
+    bottom:auto;
+    
+    }
+
+    footer h1{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+    footer #lw{
+        margin: 8px;
+        padding: 8px 0;
+        font-size: 20px;
     }
 
     
